@@ -1,0 +1,22 @@
+.home-page-wrap {
+    position: relative;
+}
+
+.hero-banner-wrap {
+    background-color: var(--baner-bg);
+}
+
+.hero-banner-image {
+
+    width: 100%;
+    height: 500px;
+}
+
+.hero-banner-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-baner-text {
+    /* max-width: 800px; */
+}

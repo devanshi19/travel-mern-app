@@ -1,0 +1,91 @@
+.header-wrap {
+    /* background-image: var(--header-bg);
+    backdrop-filter: blur(10px); */
+}
+
+.header-left ul li a {
+    font-size: 18px;
+    color: var(--header-link-color);
+}
+
+.header-left ul li a:hover {
+    font-weight: 600;
+}
+
+.header-left ul li:not(:first-child) {
+    margin-left: 40px;
+}
+
+.header-middle h1 {
+    font-weight: 800;
+    color: #009a9a;
+    margin: 0 5px;
+}
+
+.header-btn {
+    margin-right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-image: var(--header-btn-bg);
+    box-shadow:
+        0px 5px 0px 0px var(--header-btn-shadow),
+        0px 5px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.05em;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-input {
+    display: none;
+    /* Hide the checkbox */
+}
+
+.toggle-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #003d3d;
+    /* Off state color */
+    border-radius: 17px;
+    /* Half of the height to get a rounded track */
+    transition: background-color 0.2s;
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 2px;
+    /* Creates a 2px border */
+    left: 2px;
+    width: 25px;
+    /* Half of the track width minus the border */
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    /* Perfect circle */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    /* Add a soft shadow for depth */
+    transition: left 0.2s;
+    /* Animation when toggled */
+}
+
+/* Styling for when the toggle is checked/on */
+.toggle-input:checked+.toggle-track {
+    background-color: #cceaea;
+    /* On state color */
+}
+
+.toggle-input:checked+.toggle-track+.toggle-thumb {
+    left: 28px;
+    /* Move thumb to the right */
+}
