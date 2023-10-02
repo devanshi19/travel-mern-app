@@ -1,0 +1,26 @@
+:root {
+    height: 100vh;
+}
+
+:root.light {
+    --root-bg: #cceaea;
+    /* --header-bg: linear-gradient(180deg, #66c2c2, #66c2c2, #66c2c2); */
+    --header-link-color: #526D82;
+    --header-btn-bg: linear-gradient(180deg, #009a9a, #19a4a4, #32aeae);
+    --header-btn-shadow: #99d6d6;
+
+
+    /* Hero banner css */
+    --baner-bg: #F1F0E8;
+}
+
+:root.dark {
+    --root-bg: #001e1e;
+    /* --header-bg: linear-gradient(180deg, #66c2c2, #66c2c2, #66c2c2); */
+    --header-link-color: #00605f;
+    --header-btn-bg: linear-gradient(180deg, #009a9a, #008a8a, #007b7b);
+    --header-btn-shadow: #008a8a42;
+
+    /* Hero banner css */
+    --baner-bg: #96B6C5;
+}
