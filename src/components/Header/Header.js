@@ -3,9 +3,13 @@ import { NavLink } from "react-router-dom";
 import { themeContext } from "../../App";
 import "./Header.css";
 import { routePaths } from "../../Routes/RoutePaths";
+import Modal from "../Modal/Modal";
+import { useState } from "react";
+import { AiOutlineUser } from "react-icons/ai"
 
 const Header = () => {
     const contex = useContext(themeContext);
+    const [loginModalOpen, setLoginModalOpen] = useState(false);
     const navLinks = [
         {
             name: "Home",
@@ -20,8 +24,17 @@ const Header = () => {
             link: routePaths.tour
         },
     ]
+
+    //Handle Login Popup open 
+    const HandleLoginBtn = () => {
+        setLoginModalOpen(!loginModalOpen)
+    }
+
+
+
     return (
         <div className="header-wrap">
+            {loginModalOpen && (<Modal closeModal={HandleLoginBtn} />)}
             <div className="container d-flex">
                 <div className="header-left">
                     <ul className="d-flex">
@@ -39,14 +52,11 @@ const Header = () => {
                     <h1>Travel</h1>
                 </div>
                 <div className="header-right d-flex">
-                    <button className="header-btn">
-                        Login
+                    <button className="header-btn" onClick={HandleLoginBtn}>
+                        <AiOutlineUser />
                     </button>
-                    <button className="header-btn">
-                        Register
-                    </button>
-                    <label class="toggle-switch">
-                        <input type="checkbox" class="toggle-input" onClick={contex.toggleTheme} />
+                    <label className="toggle-switch">
+                        <input type="checkbox" className="toggle-input" onClick={contex.toggleTheme} />
                         <span class="toggle-track"></span>
                         <span class="toggle-thumb"></span>
                     </label>

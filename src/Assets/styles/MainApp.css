@@ -1,9 +1,18 @@
 :root {
     height: 100vh;
+    --atomic-steel-blue: #1A385A;
+    --seagull-blue: #769ABE;
+    --tomato-orange: #E46F44;
+    --pink-shell: #E8AA9B;
+    --plum-violet: #DCD5DC;
 }
 
 :root.light {
-    --root-bg: #cceaea;
+    --root-bg: #fff;
+    --text-color: #526D82;
+    --input-border: #6B728E;
+    --header-logo: #27374D;
+    --badge-bg: #E46F44;
     /* --header-bg: linear-gradient(180deg, #66c2c2, #66c2c2, #66c2c2); */
     --header-link-color: #526D82;
     --header-btn-bg: linear-gradient(180deg, #009a9a, #19a4a4, #32aeae);
@@ -12,15 +21,47 @@
 
     /* Hero banner css */
     --baner-bg: #F1F0E8;
+
+    /*Search */
+    --icon-color: var(--tomato-orange);
+
+    /* Services */
+    --servics-heading: #1A385A;
+    --hr-color: #E97777;
+    /*feature Tour */
+    --tour-img-bg: #27374D;
+    /*Footer css*/
+    --footer-bg: #E8AA9B;
+    --social-link-bg: #769ABE;
 }
 
 :root.dark {
-    --root-bg: #001e1e;
+    /* --root-bg: #404258; */
+    --root-bg: #0D1F3A;
+    --text-color: #DDE6ED;
+    --input-border: #9DB2BF;
+    --header-logo: #9DB2BF;
+    --badge-bg: #9f3c28;
     /* --header-bg: linear-gradient(180deg, #66c2c2, #66c2c2, #66c2c2); */
-    --header-link-color: #00605f;
+    --header-link-color: #DDE6ED;
     --header-btn-bg: linear-gradient(180deg, #009a9a, #008a8a, #007b7b);
     --header-btn-shadow: #008a8a42;
 
     /* Hero banner css */
     --baner-bg: #96B6C5;
+
+    /* SearchBox Css*/
+    --icon-color: var(--pink-shell);
+
+    /* Services */
+    --servics-heading: #DDE6ED;
+
+    --hr-color: #FF9F9F;
+
+    /*feature Tour */
+    --tour-img-bg: #000;
+
+    /*Footer Css*/
+    --footer-bg: #8C635D;
+    --social-link-bg: #3A5A7A
 }
