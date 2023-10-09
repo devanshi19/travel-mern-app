@@ -1,0 +1,25 @@
+.image-gallery-wrap {
+    margin: 20px 0px;
+    padding: 0px 10px 10px 10px;
+}
+
+.image-gallery-wrap img {
+    border-radius: 10px;
+}
+
+.image-gallery-wrap img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.gallery-heading hr {
+    height: 3px;
+    width: 70%;
+    color: var(--hr-color);
+}

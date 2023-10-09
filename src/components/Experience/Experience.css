@@ -1,0 +1,42 @@
+.experience-wrap {
+    margin: 20px 0px;
+}
+
+.exp-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exp-heading hr {
+    height: 3px;
+    width: 76%;
+    color: var(--hr-color);
+}
+
+.exp-detail-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.exp-detail-wrap .exp-text {
+    width: 70%;
+    padding: 0 15px;
+}
+
+.exp-detail-wrap .exp-text p {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.achievement {
+    width: 30%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.achievement div:not(:first-child) {
+
+    margin-top: 15px;
+}
