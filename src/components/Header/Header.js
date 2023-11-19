@@ -1,15 +1,15 @@
 import { useContext } from "react"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { themeContext } from "../../App";
 import "./Header.css";
 import { routePaths } from "../../Routes/RoutePaths";
-import Modal from "../Modal/Modal";
-import { useState } from "react";
-import { AiOutlineUser } from "react-icons/ai"
+import { AiOutlineUser } from "react-icons/ai";
+import { AuthContext } from "../../Context/AuthContext";
 
 const Header = () => {
     const contex = useContext(themeContext);
-    const [loginModalOpen, setLoginModalOpen] = useState(false);
+    const navigate = useNavigate();
+    const { user, dispatch } = useContext(AuthContext);
     const navLinks = [
         {
             name: "Home",
@@ -27,14 +27,18 @@ const Header = () => {
 
     //Handle Login Popup open 
     const HandleLoginBtn = () => {
-        setLoginModalOpen(!loginModalOpen)
+        navigate(routePaths.login)
+
     }
 
-
+    //Handle Logout Btn click
+    const HandleLogout = () => {
+        dispatch({ type: "LOGOUT" });
+        navigate("/");
+    }
 
     return (
         <div className="header-wrap">
-            {loginModalOpen && (<Modal closeModal={HandleLoginBtn} />)}
             <div className="container d-flex">
                 <div className="header-left">
                     <ul className="d-flex">
@@ -52,13 +56,20 @@ const Header = () => {
                     <h1>Travel</h1>
                 </div>
                 <div className="header-right d-flex">
-                    <button className="header-btn" onClick={HandleLoginBtn}>
-                        <AiOutlineUser />
-                    </button>
+                    {user !== null ? (
+                        <div className="user-info d-flex">
+                            <span>{user.username.charAt(0)}</span>
+                            <button className="btn" onClick={HandleLogout}>Logout</button>
+                        </div>
+                    ) : (
+                        <button className="header-btn" onClick={HandleLoginBtn}>
+                            <AiOutlineUser />
+                        </button>
+                    )}
                     <label className="toggle-switch">
                         <input type="checkbox" className="toggle-input" onClick={contex.toggleTheme} />
-                        <span class="toggle-track"></span>
-                        <span class="toggle-thumb"></span>
+                        <span className="toggle-track"></span>
+                        <span className="toggle-thumb"></span>
                     </label>
                 </div>
             </div>

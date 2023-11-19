@@ -1,0 +1,139 @@
+.tour-detail-wrap {
+    margin: 20px auto;
+}
+
+.tour-detail-top {
+    display: flex;
+    margin: 0 -1%;
+}
+
+.tour-detail-top .tour-image {
+    width: 60%;
+    height: 500px;
+    margin: 0 1%;
+}
+
+.tour-detail-top .tour-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.tour-detail-top .tour-right {
+    width: 40%;
+    margin: 0 1%;
+    padding: 15px 30px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.tour-right .price-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-wrap .price {
+    display: flex;
+    align-items: center;
+}
+
+.price-wrap .price h6 {
+    font-size: 25px;
+}
+
+.price-wrap .price span {
+    font-size: 18px;
+    color: var(--gray-text);
+}
+
+.icon-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.price-wrap .rating span {
+    color: var(--gray-text);
+    font-size: 18px;
+}
+
+.info-wrap {
+    margin: 25px 0px;
+    padding: 30px;
+    border: 1px solid var(--text-color);
+}
+
+.info-wrap h5 {
+    font-size: 20px;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info input {
+    margin: 5px 0px;
+}
+
+.total-price-wrap ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.total-price-wrap ul li span {
+    font-size: 14px;
+    color: var(--gray-text);
+}
+
+.book-btn-wrap {
+    text-align: center;
+}
+
+.book-btn-wrap button {
+    width: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Tour Detail Bottom*/
+.tour-detail-bottom {
+    margin: 10px 0px;
+    color: var(--text-color);
+}
+
+.description-wrap .top h5 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.description-wrap .top .rating-location {
+    display: flex;
+    align-items: center;
+}
+
+.description-wrap .top .rating-location .location {
+    margin-left: 60px;
+}
+
+.description-wrap .middle ul {
+    display: flex;
+    align-items: center;
+}
+
+.description-wrap .middle ul li:not(:first-child) {
+    margin-left: 20px;
+}
+
+.description-wrap .bottom h5 {
+    font-size: 25px;
+}
+
+.description-wrap .bottom p {
+    margin: 10px 0px;
+}

@@ -12,7 +12,7 @@ body {
 }
 
 #root {
-    background-color: var(--root-bg);
+    background-image: var(--root-bg);
 }
 
 hr {
@@ -68,7 +68,7 @@ h1,
     margin: 0;
     font-weight: 800;
     line-height: 1.2;
-    color: var(--servics-heading);
+    color: var(--heading-color);
 }
 
 .container,
@@ -157,14 +157,14 @@ a {
 label {
     font-size: 13px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--search-color);
 }
 
 input {
     font-size: 13px;
     font-weight: 500;
     background: none;
-    border-bottom: 1px solid var(--input-border);
+    border-bottom: 1px solid var(--search-color);
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -177,19 +177,26 @@ input:focus-visible {
 }
 
 input::placeholder {
-    color: #9DB2BF;
+    color: var(--search-color);
     font-size: 12px;
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: transparent;
-    color: var(--text-color);
-    background-color: #fff;
-    border: 1px solid #fff;
     font-weight: 600;
     letter-spacing: 1px;
+}
 
+.primary-btn {
+    color: #fff;
+    background-image: var(--primary-btn);
+    border: 1px solid var(--primary-btn);
+}
+
+.secondary-btn {
+    color: #fff;
+    background-color: var(--secondary-btn);
+    border: 1px solid var(--secondary-btn);
 }
 
 .btn-link {
@@ -204,5 +211,7 @@ input::placeholder {
     font-size: 16px;
     font-weight: 400;
     color: #fff;
-    background-color: var(--badge-bg);
+    background-image: var(--badge-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
 }

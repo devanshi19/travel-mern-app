@@ -1,7 +1,8 @@
 import "./Assets/styles/MainApp.css";
 import "./Assets/styles/common.css"
 import Layout from "./components/Layout/Layout";
-import { createContext, useState ,useEffect} from "react";
+import { createContext, useState, useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 export const themeContext = createContext(null);
 function App() {
@@ -17,6 +18,18 @@ function App() {
   }, [theme]);
   return (
     <themeContext.Provider value={{ theme, toggleTheme }} >
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Layout />
     </themeContext.Provider>
   );

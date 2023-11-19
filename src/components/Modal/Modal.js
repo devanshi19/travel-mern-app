@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import "./Modal.css"
+import "./Modal.css";
+import Register from '../../pages/Register/Register';
+import Login from "../../pages/Login/Login"
 
 const Modal = ({ closeModal }) => {
     const [activeTab, setActiveTab] = useState('login');
@@ -14,31 +16,14 @@ const Modal = ({ closeModal }) => {
                 </div>
                 <div className="modal-body">
                     {activeTab === "login" && (
-                        <form className="form-login">
-                            <label>Username</label>
-                            <input for="username" name="username" />
-                            <label>Password</label>
-                            <input for="password" name="password" />
-                            <button>Login</button>
-                            <span>New to travel?</span><a href="#">Signup</a>
-                        </form>
+                        <Login setActiveTab={setActiveTab} />
                     )}
                     {activeTab === "signin" && (
-                        <form className="form-signin">
-                            <label>Username</label>
-                            <input for="username" name="username" />
-                            <label>Email</label>
-                            <input for="email" name="email" />
-                            <label>Password</label>
-                            <input for="password" name="password" />
-                            <label>Confirm Password</label>
-                            <input for="confirm-pwd" name="confirm-pwd" />
-                            <button>Signup</button>
-                        </form>
+                        <Register />
                     )}
                 </div>
                 <div className='modal-footer'>
-                    <button onClick={closeModal}>Close Modal</button>
+                    <button onClick={closeModal} className="btn-link">Close Modal</button>
                 </div>
             </div>
         </div>

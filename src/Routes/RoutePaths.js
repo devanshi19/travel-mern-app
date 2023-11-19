@@ -4,4 +4,6 @@ export const routePaths = {
     tour: "/tour-list",
     login: "/login",
     register: "/register",
+    searchTour: "/tours/search/tourBySearch?",
+    tourDetail: "/tours/:id",
 }
