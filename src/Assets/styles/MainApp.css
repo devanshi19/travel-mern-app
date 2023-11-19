@@ -1,67 +1,63 @@
 :root {
     height: 100vh;
-    --atomic-steel-blue: #1A385A;
-    --seagull-blue: #769ABE;
-    --tomato-orange: #E46F44;
-    --pink-shell: #E8AA9B;
-    --plum-violet: #DCD5DC;
 }
 
 :root.light {
-    --root-bg: #fff;
-    --text-color: #526D82;
-    --input-border: #6B728E;
-    --header-logo: #27374D;
-    --badge-bg: #E46F44;
-    /* --header-bg: linear-gradient(180deg, #66c2c2, #66c2c2, #66c2c2); */
-    --header-link-color: #526D82;
-    --header-btn-bg: linear-gradient(180deg, #009a9a, #19a4a4, #32aeae);
-    --header-btn-shadow: #99d6d6;
-
-
-    /* Hero banner css */
-    --baner-bg: #F1F0E8;
-
-    /*Search */
-    --icon-color: var(--tomato-orange);
-
-    /* Services */
-    --servics-heading: #1A385A;
+    --primary-color: #1A385A;
+    /* Atomic Steel Blue  */
+    --secondary-color: #769ABE;
+    /* Seagull Blue */
+    --tomato-orange: #E46F44;
+    --pink-shell: #E8AA9B;
+    --plum-violet: #DCD5DC;
+    --root-bg: linear-gradient(126deg, #dcd5dc30, #dcd5dca1, #769abec9, #1a385ae8);
+    --text-color: #0A1C3B;
+    --gray-text: #fff;
+    --heading-color: #1A385A;
+    --banner-text-color: #0A1C3B;
+    --button-bg-gradient: linear-gradient(126deg, #769ABE, #769abecc, #e8aa9b85);
+    --primary-btn: linear-gradient(19deg, #769abed6, #769abe94, #e8aa9bb0);
+    --secondary-btn: #0a1c3bb5;
+    --badge-bg: linear-gradient(160deg, #e46f44a6, #e8aa9bb5, #dcd5dca1);
     --hr-color: #E97777;
-    /*feature Tour */
+    --search-bg: var(--pink-shell);
+    --search-color: #0A1C3B;
+    --header-btn-shadow: #1A385A;
+    --card-icon-bg: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    --footer-bg: #1a385a4d;
+    --footer-heading: #DCD5DC;
+    --footer-social-icon: radial-gradient(circle, rgba(228, 111, 68, 0.9753151260504201) 21%, rgba(220, 213, 220, 0.9192927170868347) 95%);
+
     --tour-img-bg: #27374D;
-    /*Footer css*/
-    --footer-bg: #E8AA9B;
     --social-link-bg: #769ABE;
 }
 
 :root.dark {
-    /* --root-bg: #404258; */
-    --root-bg: #0D1F3A;
-    --text-color: #DDE6ED;
-    --input-border: #9DB2BF;
-    --header-logo: #9DB2BF;
-    --badge-bg: #9f3c28;
-    /* --header-bg: linear-gradient(180deg, #66c2c2, #66c2c2, #66c2c2); */
-    --header-link-color: #DDE6ED;
-    --header-btn-bg: linear-gradient(180deg, #009a9a, #008a8a, #007b7b);
-    --header-btn-shadow: #008a8a42;
-
-    /* Hero banner css */
-    --baner-bg: #96B6C5;
-
-    /* SearchBox Css*/
-    --icon-color: var(--pink-shell);
-
-    /* Services */
-    --servics-heading: #DDE6ED;
-
+    --primary-color: #0A1C3B;
+    --secondary-color: #4D648D;
+    --tomato-orange: #AE4D32;
+    --pink-shell: #A1756D;
+    --gray-100: #888888;
+    --gray-200: #000000;
+    --root-bg: linear-gradient(126deg, #000000, #000000e3, #0a1c3bed, #0A1C3B);
+    --text-color: #888888;
+    --gray-text: #888888;
+    --heading-color: #DDE6ED;
+    --banner-text-color: #0A1C3B;
+    --button-bg-gradient: linear-gradient(126deg, #769ABE, #769abecc, #e8aa9b85);
+    --primary-btn: linear-gradient(26deg, #4d648d, #4d648dd4, #ae4d32a3);
+    --secondary-btn: #dcd5dc78;
+    --badge-bg: linear-gradient(160deg, #ae4d325e, #ae4d3282, #4d648ded);
     --hr-color: #FF9F9F;
+    --search-bg: var(--pink-shell);
+    --search-color: #fff;
+    --header-btn-shadow: #4D648D;
+    --card-icon-bg: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    --footer-bg: #00000052;
+    --footer-heading: #DDE6ED;
+    --footer-social-icon: radial-gradient(circle, rgba(77, 100, 141, 0.9893207282913166) 17%, rgba(174, 77, 50, 1) 92%);
 
-    /*feature Tour */
+
     --tour-img-bg: #000;
-
-    /*Footer Css*/
-    --footer-bg: #8C635D;
     --social-link-bg: #3A5A7A
 }

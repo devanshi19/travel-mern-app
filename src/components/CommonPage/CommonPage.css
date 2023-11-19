@@ -1,0 +1,22 @@
+.common-page-wrap .baner-wrap {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: black;
+}
+
+.common-page-wrap .baner-wrap img {
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.common-page-wrap .baner-wrap h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+
+}

@@ -2,6 +2,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "./ImageGallery.css"
 import { galleryimg1, galleryimg2, galleryimg3, galleryimg4, galleryimg5, galleryimg6, galleryimg7, galleryimg8 } from "../../Utils/images";
 
+
 const ImageGallery = () => {
     const imageObject = [
 
@@ -39,18 +40,23 @@ const ImageGallery = () => {
             alt: galleryimg8.name
         }
     ]
+
     return (
-        <div className="image-gallery-wrap">
+        <div className="image-gallery-wrap" id="imageGallery">
             <div className="gallery-heading">
                 <hr />
                 <h2> Visit Our Cutomer Tour Gallery</h2>
             </div>
             <ResponsiveMasonry
-                columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1200: 4 }}
+                columnsCountBreakPoints={{ 350: 1, 750: 3, 900: 4, 1200: 5 }}
             >
-                <Masonry gutter="1rem" >
+                <Masonry gutter="5px" >
                     {imageObject.map((image, i) => {
-                        return <img key={i} src={image.src} alt={image.alt} />
+                        return (
+                            <div className="image-container">
+                                <img key={i} src={image.src} alt={image.alt} />
+                            </div>
+                        )
                     })}
                 </Masonry>
             </ResponsiveMasonry >

@@ -1,17 +1,14 @@
-import { TiWeatherPartlySunny } from "react-icons/ti";
-import { RiGuideFill } from "react-icons/ri";
-import { BiCustomize } from "react-icons/bi"
 
-
-const ServicesComponent = () => {
+const ServicesComponent = ({ service }) => {
     return (
         <div className="service-card">
             <div className="card-img">
-                <TiWeatherPartlySunny className="card-icon" />
+                {service.icon}
+                {/* <TiWeatherPartlySunny className="card-icon" /> */}
             </div>
             <div className="card-text">
-                <h4>Calculate Weather</h4>
-                <p>we provide accurate and up-to-the-minute weather information right at your fingertips.</p>
+                <h4>{service.title}</h4>
+                <p>{service.text}</p>
             </div>
         </div>
     )

@@ -1,23 +1,39 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { GiPathDistance } from "react-icons/gi";
 import { BsPeople, BsSearchHeart } from "react-icons/bs";
-import "./SearchBox.css"
+import "./SearchBox.css";
+import showToast from "../ToastNotification/Notification";
+import { BASE_URL } from "../../Utils/Config";
 
 
 const SearchBox = () => {
     const [locationValue, setLocationValue] = useState("");
     const [distanceValue, setDistanceValue] = useState(0);
     const [peopleCout, setPeopleCount] = useState(0);
+    //const [searchData, setSearchData] = useState([]);
+    const navigate = useNavigate();
     const HandleDistance = (e) => {
         setDistanceValue(e.target.value)
     }
     const HandlePeopleCpount = (e) => {
         setPeopleCount(e.target.value)
     }
-    const HandleSearch = () => {
+    const HandleSearch = async () => {
         if (locationValue === "" || distanceValue === 0 || peopleCout === 0) {
-            console.log("error")
+            showToast('error', 'All values are require!');
+        }
+        else {
+            const res = await fetch(`${BASE_URL}/tours/search/tourBySearch?city=${locationValue}&distance=${distanceValue}&maxGroupSize=${peopleCout}`)
+            if (res.status === 200) {
+                const responseData = await res.json()
+                navigate(`/tours/search/tourBySearch?city=${locationValue}&distance=${distanceValue}&maxGroupSize=${peopleCout}`,
+                    { state: responseData.data })
+            }
+            else {
+                showToast('error', 'Something went wrong');
+            }
         }
     }
     return (
